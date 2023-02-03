@@ -1,19 +1,22 @@
 {% set name = "aimrocks" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/aimhubio/aimrocks/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: c30ff542ba95cd615616cec07061f33e8385ebd131801fc2cdaf83010241a469
+  # 0.3.1: waiting for a proper git tag
+  url: https://github.com/aimhubio/aimrocks/archive/812f15af21b5e137159f8b5c620b7b6b65bee8b4.tar.gz
+  sha256: b9289febb49ca31bec6300e8d71c2551b5b7781d6274471481733eb23d845f77
+  # url: https://github.com/aimhubio/aimrocks/archive/refs/tags/v{{ version }}.tar.gz
+  # sha256: c30ff542ba95cd615616cec07061f33e8385ebd131801fc2cdaf83010241a469
 
   patches:
     - setup_rocksdb.patch
 
 build:
-  number: 3
+  number: 0
   skip: true  # [win]
 
 requirements:
