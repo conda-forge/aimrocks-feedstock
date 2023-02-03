@@ -13,14 +13,14 @@ source:
     - setup_rocksdb.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
 
 requirements:
   build:
     - python                                           # [build_platform != target_platform]
     - cross-python_{{ target_platform }}               # [build_platform != target_platform]
-    - cython ==3.0.0a10                                # [build_platform != target_platform]
+    - cython ==3.0.*                                   # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make  # [unix]
@@ -28,7 +28,7 @@ requirements:
     - python
     - pip
     - setuptools >=25
-    - cython ==3.0.0a10
+    - cython ==3.0.*
     - rocksdb ==6.29.5
     # NOTE(hadim): we include those rocksdb compression libs since they are not included implicitely.
     - lz4-c
