@@ -6,11 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  # 0.3.1: waiting for a proper git tag
-  url: https://github.com/aimhubio/aimrocks/archive/b9774af4130c2829b2371acd757593b6f61aceb2.tar.gz
-  sha256: 9c68fe313ccbdc30e6f02e4c0d2392b7edadf65b92af041b758908e52558dc78
-  # url: https://github.com/aimhubio/aimrocks/archive/refs/tags/v{{ version }}.tar.gz
-  # sha256: c30ff542ba95cd615616cec07061f33e8385ebd131801fc2cdaf83010241a469
+  url: https://github.com/aimhubio/aimrocks/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: b63e7f8c596d410cf7623632535e7fa32a2dda228934a24e8ffd5299febba9a4
 
 build:
   number: 0
