@@ -1,11 +1,11 @@
-About aimrocks
-==============
+About aimrocks-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aimrocks-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/aimhubio/aimrocks
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/aimrocks-feedstock/blob/main/LICENSE.txt)
 
 Summary: aimrocks — python/cython bindings for RocksDB.
 
