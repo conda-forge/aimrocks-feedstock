@@ -1,5 +1,5 @@
 {% set name = "aimrocks" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/aimhubio/aimrocks/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: b63e7f8c596d410cf7623632535e7fa32a2dda228934a24e8ffd5299febba9a4
+  sha256: 014e667640b08bcbaf72e14a148de92068cf1e0f3302ea2105b85cc141667a99
 
 build:
   number: 0
@@ -50,7 +50,7 @@ test:
 
 about:
   home: https://github.com/aimhubio/aimrocks
-  summary: "aimrocks — python/cython bindings for RocksDB."
+  summary: aimrocks — python/cython bindings for RocksDB.
   license: Apache-2.0
   license_file: LICENSE
 
