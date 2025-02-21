@@ -1,5 +1,5 @@
 {% set name = "aimrocks" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,17 +7,18 @@ package:
 
 source:
   url: https://github.com/aimhubio/aimrocks/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 014e667640b08bcbaf72e14a148de92068cf1e0f3302ea2105b85cc141667a99
+  sha256: aeb24aaf0a0e10381bdd950b30e55319c10b4515351cf9d3e8fcc2e74065e719
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
   build:
     - python                                           # [build_platform != target_platform]
     - cross-python_{{ target_platform }}               # [build_platform != target_platform]
-    - cython ==3.0.*                                   # [build_platform != target_platform]
+    - cython                                           # [build_platform != target_platform]
+    - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make  # [unix]
@@ -25,7 +26,7 @@ requirements:
     - python
     - pip
     - setuptools >=25
-    - cython ==3.0.*
+    - cython
     - rocksdb ==6.29.5
     # NOTE(hadim): we include those rocksdb compression libs since they are not included implicitely.
     - lz4-c
