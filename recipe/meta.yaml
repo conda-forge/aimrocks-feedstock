@@ -20,6 +20,7 @@ requirements:
     - cython                                           # [build_platform != target_platform]
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - make  # [unix]
   host:
